@@ -1,0 +1,34 @@
+before_script:
+  - nuget restore
+  
+stages:
+  - build
+  - test
+  
+build_project:
+  stage: build
+  script:
+  - echo "Building RosPenTo"
+  - cd %CI_PROJECT_DIR%\RosPenTo
+  - msbuild
+  - echo "Building RosPenToConsole"
+  - cd %CI_PROJECT_DIR%\RosPenToConsole
+  - msbuild
+  - echo "Building RosPenToTest"
+  - cd %CI_PROJECT_DIR%\RosPenToTest
+  - msbuild
+  artifacts:
+    untracked: true # pass all GIT untracked files between different jobs
+  tags:
+  - .net 
+  - windows
+    
+test:
+  stage: test
+  script:
+  - 'mstest /testcontainer:"%CI_PROJECT_DIR%\RosPenToTest\bin\Debug\RosPenToTest.dll"'
+  dependencies:
+  - build_project
+  tags:
+  - .net 
+  - windows
