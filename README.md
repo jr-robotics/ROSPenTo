@@ -4,6 +4,11 @@ The Robot Operating System (ROS) penetration testing tool (ROSPenTo) can send XM
 ## Description
 ROSPenTo is a penetration testing tool for the Robot Operating System (ROS). Any ROS-Network can be analyzed.
 
+```
+By no means do we want to encourage or promote the unauthorized tampering with running robotic applications since this can cause damage and serious harm.
+
+Nevertheless, we think it is important to show that those vulnerabilities exist and to make the ROS community aware how easily an application can be undermined.
+```
 
 ## Getting Started
 
