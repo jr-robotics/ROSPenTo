@@ -5,14 +5,17 @@ The Robot Operating System (ROS) penetration testing tool (ROSPenTo) can send XM
 ROSPenTo is a penetration testing tool for the Robot Operating System (ROS). Any ROS-Network can be analyzed.
 
 ```
-By no means do we want to encourage or promote the unauthorized tampering with running robotic applications since this can cause damage and serious harm.
+By no means do we want to encourage or promote the unauthorized tampering with
+running robotic applications since this can cause damage and serious harm.
 
-Nevertheless, we think it is important to show that those vulnerabilities exist and to make the ROS community aware how easily an application can be undermined.
+Nevertheless, we think it is important to show that those vulnerabilities exist
+and to make the ROS community aware how easily an application can be undermined.
 ```
 
 ## Getting Started
 
 ### Compiling and running
+#### Windows
 In Windows, you can compile and run ROSPenTo straightforward using
 
 ```
@@ -23,7 +26,7 @@ RosPenToConsole.exe
 ```
 or open, compile and run it in Visual Studio.
 
-
+#### Linux
 In Linux, make sure you have a current version of Mono installed (apt-get'ing might return an old version).
 
 Follow the installation instructions on the Mono website http://www.mono-project.com/download/stable/#download-lin
@@ -35,6 +38,13 @@ nuget restore
 msbuild
 cd RosPenToConsole/bin/Debug
 mono RosPenToConsole.exe
+```
+
+#### Docker container
+```bash
+docker build -t rospento . # build the container
+docker run -it rospento
+> ROSPenTo #  an alias for "rospento" has also been created
 ```
 
 
@@ -88,7 +98,7 @@ RosPenToConsole.exe
 ```
 
 ### With parameters
-When you specify parameters you can run a **publisher update** command 
+When you specify parameters you can run a **publisher update** command
 * -t, --target     Required. ROS Master URI of the target system.
 * -p, --pentest    Required. ROS Master URI of the penetration testing system.
 * --sub            Required. Name of the affected subscriber in the target system.
@@ -112,7 +122,7 @@ Run two roscores on your machine
 roscore&
 roscore -p 11312&
 ```
-Run a publisher in the first master 
+Run a publisher in the first master
 
 ```
 rosrun rospy_tutorials talker
