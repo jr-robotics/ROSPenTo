@@ -12,6 +12,29 @@ Nevertheless, we think it is important to show that those vulnerabilities exist
 and to make the ROS community aware how easily an application can be undermined.
 ```
 
+## Citing
+If you are using RosPenTo in your research, we would be grateful if you cite this publication
+
+Bernhard Dieber, Ruffin White, Sebastian Taurer, Benjamin Breiling, Gianluca Caiazza, Henrik Christensen, Agostino Cortesi (2019). Penetration testing ROS. Penetration testing ROS.
+https://link.springer.com/chapter/10.1007/978-3-030-20190-6_8
+
+
+```
+@Inbook{Dieber2020,
+author="Dieber, Bernhard and White, Ruffin and Taurer, Sebastian and Breiling, Benjamin and Caiazza, Gianluca and Christensen, Henrik and Cortesi, Agostino",
+editor="Koubaa, Anis",
+title="Penetration Testing ROS",
+bookTitle="Robot Operating System (ROS): The Complete Reference (Volume 4)",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="183--225",
+isbn="978-3-030-20190-6",
+doi="10.1007/978-3-030-20190-6_8",
+url="https://doi.org/10.1007/978-3-030-20190-6_8"
+}
+```
+
 ## Getting Started
 
 ### Compiling and running
